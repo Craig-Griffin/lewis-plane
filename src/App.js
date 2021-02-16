@@ -1,25 +1,33 @@
 import logo from './logo.svg';
 import './App.css';
+import React, { Component } from 'react';
+import {GLTFModel,AmbientLight,DirectionLight} from 'react-3d-viewer'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+import plane from './test_plane.glb'
+
+
+class App extends React.Component {
+
+
+    render() {
+        return (
+            <div className="modelContainer">
+
+
+
+                <GLTFModel
+                    src={plane}
+                    width={2000}
+                    height={1000}
+
+
+                >
+                </GLTFModel>
+
+            </div>
+        );
+    }
 }
 
 export default App;
